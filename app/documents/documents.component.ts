@@ -8,6 +8,8 @@ import { Document } from './document';
 })
 
 export class DocumentsComponent{
+  pageTitle: string = "Documents Dashboard"
+  
   documents: Document[] = [
     {
       title: "My first Doc",
