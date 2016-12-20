@@ -1,5 +1,15 @@
-<h1>Proposal List</h1>
-
-<div *ngFor= "let i of proposals">
-  <a routerLink="/proposal/{{i.id}}">{{i.id}} - {{i.customer}}: {{i.portfolio_url}}</a>
+<div class="container">
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action active">
+      <h1 class="headline">Proposal List</h1>
+    </a>
+    <span *ngFor= "let i of proposals" class="list-group-item list-group-item-action">
+      <a routerLink="/proposal/{{i.id}}" class="proposal-link">
+        <h5 class="list-group-item-heading">{{i.customer}}</h5>
+        <p class="list-group-item-text">
+          {{ i.hourly_rate * i.estimated_hours }}
+        </p>
+      </a>
+    </span>
+  </div>
 </div>
