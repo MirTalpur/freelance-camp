@@ -4,15 +4,20 @@
   <div class="card" *ngFor="let i of documents">
     <img class="card-img-top" src="{{i.image_url}}" alt="Card image cap" width="100%">
     <div class="card-block">
-    <h4 class="card-title">{{i.title}}</h4>
+      <h4 class="card-title">{{i.title}}</h4>
       
+      <p class="card-text">
+        <small class="text-muted">Last Updated: {{ i.updated_at | date }}
+        </small>
+      </p>
+
       <p>{{ i.description}}</p>
       
       <div>
         <a class="btn btn-lg btn-primary" href="{{i.file_url}}">Download File</a>
       </div>
 
-      <p class="card-text"><small class="text-muted">{{i.updated_at}}</small></p>
+      
 
     </div>
   </div>
