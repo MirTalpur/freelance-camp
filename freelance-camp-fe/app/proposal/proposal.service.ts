@@ -22,7 +22,7 @@ export class ProposalService {
     return this.http.get(this.proposalsUrl + "/" + id + ".json");
   }
 
-  createProposal(proposal) {
+  createProposal(proposal:any) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     //post is a function this.proposalsUrl is the api connection and from there you
